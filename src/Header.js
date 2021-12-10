@@ -1,13 +1,13 @@
-import './Header.css'
+import './Header.css';
 
 import { Link } from 'react-router-dom';
-import React from 'react'
+import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { useStateValue } from "./StateProvider";
 
 function Header() {
-    const [{ basket }, dispatch] = useStateValue ();
+    const [{ basket }] = useStateValue ();
     return (
         <div className='header'>
         <Link to ="/">
@@ -28,10 +28,12 @@ function Header() {
             </div>
 
             <div className="header_nav">
+                <Link to='/login'>
                 <div className='header_option'>
                     <span className='header_OptionLineOne'> Hello Guest</span>
                     <span className='header_OptionLineTwo'> Sign In</span>
                 </div>
+                </Link>
                
                 <div className='header_option'>
                     <span className='header_OptionLineOne'> Returns</span>

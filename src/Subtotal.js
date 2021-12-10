@@ -6,17 +6,17 @@ import { getBasketTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
 
 function Subtotal() {
-    const [{ basket }, dispatch] = useStateValue ();
+    const [{ basket }] = useStateValue();
     
     return (
         <div
         className="subtotal">
         
         <CurrencyFormat
-        renderText={(value) => (
+         renderText={(value) => (
             <>
             <p>
-                Subtotal ({basket.length} items) :
+                Subtotal ({basket.length} items):
                 <strong>{value}</strong>
             </p>
             <small className ="subtotal_gift">
@@ -27,11 +27,11 @@ function Subtotal() {
         decimalScale={2}
         value={getBasketTotal(basket)}
         displayType={"text"}
-        thousandSeparator={ true }
+        thousandSeparator={true}
          prefix={"$"}
          />
          
-         <button> Proceed to Checkout </button> 
+         <button>Proceed to Checkout</button> 
             
         </div>
     )

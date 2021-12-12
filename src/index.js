@@ -1,6 +1,6 @@
 import './index.css';
 
-import reducer, {initialState} from "./reducer" ;
+import reducer, {initialState} from "./reducer";
 
 import App from './App';
 import React from 'react';
